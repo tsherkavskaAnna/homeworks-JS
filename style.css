@@ -1,0 +1,56 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+body {
+    padding: 10px;
+    background-color: antiquewhite;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: blue;
+}
+.section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.text-input {
+    margin-right: 10px;
+    width: 230px;
+    height: 30px;
+    border: 1px solid blueviolet;
+    border-radius: 2px;
+}
+.text-input :focus {
+    cursor: pointer;
+    border: 1px solid red;
+}
+.btn {
+    width: 50px;
+    cursor: pointer;
+}
+.output {
+    
+    color: brown;
+}
