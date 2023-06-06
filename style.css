@@ -22,6 +22,9 @@ body {
     padding: 10px;
     background-color: antiquewhite;
 }
+a {
+    text-decoration: none;
+}
 .title {
     display: flex;
     justify-content: center;
@@ -32,25 +35,33 @@ body {
 }
 .section {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+.label {
+    margin-right: 10px;
+    font-size: large;
 }
 .text-input {
     margin-right: 10px;
-    width: 230px;
+    width: 250px;
     height: 30px;
+    padding: 5px;
     border: 1px solid blueviolet;
     border-radius: 2px;
 }
-.text-input :focus {
-    cursor: pointer;
-    border: 1px solid red;
-}
 .btn {
     width: 50px;
+    height: 20px;
     cursor: pointer;
 }
-.output {
-    
+.resultSection {
+    margin-top: 25px;
     color: brown;
+}
+.containerTriangolo {
+    margin-top: 25px;
+    margin-left: 35px;
 }
