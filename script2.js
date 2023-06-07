@@ -1,56 +1,42 @@
 // Clesssidra//
-/*function stampaClessidra() {
+function stampaClessidra() {
 
-    const numLine = document.getElementById('num-input').value;
+    const numLine = parseInt(document.getElementById('num-input').value);
     const containerClessidra = document.getElementById('container-clessidra');
-
+    
     let clessidra = '';
-    let line = '';
+    const halfRows = Math.floor(numLine / 2);
 
-for ( let i = numLine; i >= 1; i--) {
+//Parte sopra destra di clessidra
+    for (let i = numLine; i >= 1; i -= 2) {
+        const spazzi = (numLine - i) / 2;
+    
+        //stampare spazzi
+        for ( let j = 0; j < spazzi; j++) {
+            clessidra += ' ';
+        }
+        //Stampare asterischi
+        for( let j = 0; j < i; j++) {
+            clessidra += '*';
+        }
+        clessidra += "<br>"
+    }
+//Parte inferiore destra di clessidra
+for( let i = 3; i <= numLine; i += 2) {
+    const spazzi = (numLine - i) / 2;
 
-    for ( let j = 1; j < (numLine - 1) / 2; j++) {
-        line += '&';
+    //stampare spazzi
+    for (let j = 0; j < spazzi; j++) {
+        clessidra += ' '
     }
-    for (let k = 0; k < numLine - i ; k++) {
-      line += '*';
+    //stampare asterischi
+    for (let j = 0; j < i; j++) {
+        clessidra += '*'
     }
-    clessidra += line +'<br>'
+    clessidra += "<br>"
 }
-containerClessidra.innerHTML = clessidra;
-}*/
-function printHourglass() {
-    let numAsterisks = 7;
-  
-    // Parte superiore della clessidra
-    for (let i = 0; i < 7; i++) {
-      let line = '';
-      for (let j = 0; j < numAsterisks; j++) {
-        line += '*';
-      }
-      console.log(line);
-      if (numAsterisks === 1) {
-        numAsterisks++;
-      } else {
-        numAsterisks--;
-      }
-    }
-  
-    // Parte inferiore della clessidra
-    numAsterisks = 2;
-    for (let i = 7 - 1; i > 0; i--) {
-      let line = '';
-      for (let j = 0; j < numAsterisks; j++) {
-        line += '*';
-      }
-      console.log(line);
-      numAsterisks++;
-    }
-  }
-  
-  
-
-  
+    containerClessidra.innerHTML = clessidra;
+}
 
 
 
