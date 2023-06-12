@@ -50,14 +50,24 @@ const nome = document.querySelector('body');
 let longestName = '';
 let lenghtOfName = 0;
 
-for (let i = 0; i < names.length; i++) {
-    const currentName = names[i].replace(/[\s-]/g, '');
-    const length = currentName.length;
+for (let name of names) {
+   let lettere = [];
 
-    if(length > lenghtOfName) {
-        longestName = names[i];
-        lenghtOfName = length
+   for( let l of name) 
+   {
+    if( l == " " || l == "-") continue;
+    if( !lettere.includes(l)) 
+    {
+        lettere.push(l)
     }
+
+   }
+   
+   if(lettere.length > lenghtOfName) {
+    lenghtOfName = lettere.length;
+    longestName = name
+   }
+
 }
 
  nome.innerHTML = "Il nome piu lungo è: " + longestName + "<br>" + "con le lettere: " + lenghtOfName;
